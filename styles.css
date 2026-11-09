@@ -156,6 +156,27 @@ a { color: inherit; text-decoration: none; }
 .crumb a { color: var(--verde-2); }
 .sub-hero h1 { font-size: 52px; color: var(--verde); }
 .sub-hero .lead { font-size: 19px; color: var(--gris); max-width: 52ch; margin: 18px 0 0; }
+
+/* ---------- Sub-hero con foto (páginas de servicio) ---------- */
+.sub-hero.photo { position: relative; background: var(--verde); padding: 108px 0 92px; overflow: hidden; }
+.sub-hero.photo::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: var(--img); background-size: cover; background-position: center;
+}
+.sub-hero.photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(20,42,32,.96) 0%, rgba(20,42,32,.86) 44%, rgba(20,42,32,.42) 100%);
+}
+.sub-hero.photo .wrap { position: relative; z-index: 1; }
+.sub-hero.photo h1 { color: #fff; }
+.sub-hero.photo .lead { color: rgba(246,240,228,.92); }
+.sub-hero.photo .kicker { color: var(--arena); }
+.sub-hero.photo .crumb, .sub-hero.photo .crumb a { color: rgba(246,240,228,.74); }
+@media (max-width: 760px) {
+  .sub-hero.photo { padding: 76px 0 64px; }
+  .sub-hero.photo::after { background: linear-gradient(180deg, rgba(20,42,32,.9) 0%, rgba(20,42,32,.84) 55%, rgba(20,42,32,.72) 100%); }
+}
+
 .contact-section { padding-top: 72px; }
 .contact-grid { display: grid; grid-template-columns: 1.5fr .85fr; gap: 72px; align-items: start; }
 .contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
