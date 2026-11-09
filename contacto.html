@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contacto — Mitosmart Solutions · Barrio de Salamanca</title>
-<meta name="description" content="Contacta con Mitosmart Solutions para el mantenimiento integral de tu piso en el barrio de Salamanca (Madrid).">
-<link rel="stylesheet" href="styles.css?v=20261109b">
+<title>Contacto — Mitosmart · Mantenimiento de pisos, Barrio de Salamanca</title>
+<meta name="description" content="Solicita una revisión de tu piso en el barrio de Salamanca (Madrid). Un único interlocutor para el mantenimiento integral: prevención, incidencias y proveedores.">
+<link rel="stylesheet" href="styles.css?v=20261109c">
 </head>
 <body>
 
@@ -28,50 +28,90 @@
 <header class="sub-hero">
   <div class="wrap">
     <p class="crumb"><a href="index.html">Inicio</a> · Contacto</p>
-    <p class="kicker">Contacto</p>
-    <h1>Hablemos de tu piso.</h1>
+    <p class="kicker">Primer paso</p>
+    <h1>Solicitar una revisión</h1>
+    <p class="lead">Visitamos tu piso, revisamos instalaciones y te decimos qué necesita —sin compromiso y sin coste.</p>
   </div>
 </header>
 
-<section class="section">
+<section class="section contact-section">
   <div class="wrap contact-grid">
-    <form class="contact-form">
-      <label for="nombre">Nombre</label>
-      <input id="nombre" type="text" name="nombre" placeholder="Tu nombre">
 
-      <label for="telefono">Teléfono</label>
-      <input id="telefono" type="tel" name="telefono" placeholder="+34 600 000 000">
+    <div class="contact-main">
+      <form class="contact-form" id="form-revision" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="REEMPLAZAR_WEB3FORMS_KEY">
+        <input type="hidden" name="subject" value="Nueva solicitud de revisión — mitosmart.net">
+        <input type="hidden" name="from_name" value="Web Mitosmart">
+        <input type="hidden" name="redirect" value="https://mitosmart.net/gracias.html">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
 
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" placeholder="tu@email.com">
+        <div class="form-row">
+          <div class="field">
+            <label for="nombre">Nombre y apellidos</label>
+            <input id="nombre" type="text" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" type="tel" name="telefono" autocomplete="tel" required>
+          </div>
+        </div>
 
-      <label for="mensaje">Cuéntanos sobre la propiedad</label>
-      <textarea id="mensaje" name="mensaje" placeholder="Ubicación, tipo de inmueble, qué necesitas…"></textarea>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" autocomplete="email" required>
+        </div>
 
-      <div style="margin-top: 28px;">
-        <button class="btn solid" type="button">Enviar solicitud</button>
-      </div>
-      <p class="note">Formulario de maqueta: aún no está conectado a ningún envío.</p>
-    </form>
+        <div class="field">
+          <label for="tipo">Tipo de inmueble</label>
+          <select id="tipo" name="tipo" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option>Piso en edificio clásico</option>
+            <option>Piso reformado</option>
+            <option>Ático o dúplex</option>
+            <option>Vivienda unifamiliar</option>
+            <option>Otro</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">¿Qué necesita el piso?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ubicación, estado general, incidencias abiertas o lo que quieras contarnos."></textarea>
+        </div>
+
+        <div class="form-check">
+          <input id="privacidad" type="checkbox" name="privacidad" required>
+          <label for="privacidad">He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn solid" type="submit">Enviar solicitud</button>
+          <p class="form-note">Respondemos en menos de 24 horas laborables.</p>
+        </div>
+      </form>
+    </div>
 
     <aside class="contact-aside">
-      <div class="row">
-        <p class="k">Teléfono</p>
-        <p class="v"><a href="tel:+34610273257">+34 610 27 32 57</a></p>
+      <div class="aside-block">
+        <p class="aside-k">Teléfono</p>
+        <p class="aside-v"><a href="tel:+34659640783">659 640 783</a></p>
       </div>
-      <div class="row">
-        <p class="k">Email</p>
-        <p class="v"><a href="mailto:admin@weysidesolutions.com">admin@weysidesolutions.com</a></p>
+      <div class="aside-block">
+        <p class="aside-k">Email</p>
+        <p class="aside-v"><a href="mailto:hola@mitosmart.net">hola@mitosmart.net</a></p>
       </div>
-      <div class="row">
-        <p class="k">Zona</p>
-        <p class="v">Barrio de Salamanca, Madrid</p>
+      <div class="aside-block">
+        <p class="aside-k">Zona de servicio</p>
+        <p class="aside-v">Barrio de Salamanca y entorno<br>Madrid</p>
       </div>
-      <div class="row">
-        <p class="k">Horario</p>
-        <p class="v">Lunes a viernes, 9:00–19:00</p>
+      <div class="aside-block">
+        <p class="aside-k">Horario</p>
+        <p class="aside-v">Lunes a viernes, 9:00–19:00<br>Urgencias: 24 h</p>
+      </div>
+      <div class="aside-quote">
+        <p>«Un solo número para todo lo que le pasa a tu casa.»</p>
       </div>
     </aside>
+
   </div>
 </section>
 
@@ -93,12 +133,12 @@
       </div>
       <div class="col">
         <p>Barrio de Salamanca, Madrid</p>
-        <p><a href="tel:+34610273257">+34 610 27 32 57</a></p>
-        <p><a href="mailto:admin@weysidesolutions.com">admin@weysidesolutions.com</a></p>
+        <p><a href="tel:+34659640783">659 640 783</a></p>
+        <p><a href="mailto:hola@mitosmart.net">hola@mitosmart.net</a></p>
       </div>
     </div>
     <div class="legal">
-      Mitosmart SL · <a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a>
+      Mitosmart SL · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a>
     </div>
   </div>
 </footer>
