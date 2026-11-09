@@ -198,6 +198,18 @@ a { color: inherit; text-decoration: none; }
 }
 .footer .acronym strong { color: var(--crema); font-weight: 600; letter-spacing: 0.18em; }
 
+/* ---------- WhatsApp flotante ---------- */
+.wa-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 80;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25D366; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 22px rgba(0,0,0,.22);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.wa-float:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.28); }
+@media (max-width: 900px) { .wa-float { right: 16px; bottom: 16px; width: 52px; height: 52px; } }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
