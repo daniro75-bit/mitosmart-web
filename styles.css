@@ -257,3 +257,7 @@ a { color: inherit; text-decoration: none; }
   .sec-head h2 { font-size: 34px; }
   .nav-links { display: none; }
 }
+
+/* Enlaces en las celdas de servicio de la home */
+.cell h3 a { color: inherit; text-decoration: none; }
+.cell h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
